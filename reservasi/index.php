@@ -75,16 +75,31 @@
             <div class="col-sm-9">
                 <aside class="tab-content">
                   <div id="customer" class="container tab-pane fade">
-                    <h3>Ini Customer</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Customer Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'customer.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="vendor" class="container tab-pane fade">
-                    <h3>Ini Vendor</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Vendor Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'vendor.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="reservation" class="container tab-pane fade">
-                    <h3>Ini Reservation</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Reservation Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'reservation.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="transaction" class="container tab-pane fade">
                     <h3>Ini Transaction</h3>
@@ -92,7 +107,12 @@
                   </div>
                   <div id="thevenue" class="container tab-pane fade">
                     <h3>Ini The Venue</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'venue.php'; ?>
+                      </div>
+                    </div>
                   </div>
                 </aside>
             </div>
