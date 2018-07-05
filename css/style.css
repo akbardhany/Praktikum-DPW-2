@@ -15,3 +15,35 @@
 .no-pointer{
   pointer-events:none;
 }
+
+.animate {
+  position: relative;
+  -webkit-animation-name: animate;
+  -webkit-animation-duration: 1s;
+  animation-name: animate;
+  animation-duration: 1s
+}
+@-webkit-keyframes animate {
+  from { top:-100px; opacity:0 }
+  to { top:0px; opacity:1 }
+}
+@keyframes animate {
+  from{ top:-100px; opacity:0 }
+  to{ top:0; opacity:1 }
+}
+
+.animate2 {
+  position: relative;
+  -webkit-animation-name: animate2;
+  -webkit-animation-duration: 1s;
+  animation-name: animate2;
+  animation-duration: 1s
+}
+@-webkit-keyframes animate2 {
+  from { left:-100px; opacity:0 }
+  to { left:0px; opacity:1 }
+}
+@keyframes animate2 {
+  from{ left:-100px; opacity:0 }
+  to{ left:0; opacity:1 }
+}
