@@ -75,24 +75,49 @@
             <div class="col-sm-9">
                 <aside class="tab-content">
                   <div id="employee" class="container tab-pane fade">
-                    <h3>Ini Employee</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Employee Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'employee.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="field-coordinator" class="container tab-pane fade">
-                    <h3>Ini Field Coordinator</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Field-Coordinator Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'field-coordinator.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="security-team" class="container tab-pane fade">
-                    <h3>Ini Security Team</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Security Team Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'security-team.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="security-salary" class="container tab-pane fade">
-                    <h3>Ini Salary of The Security Team</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Security Team Salary Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'securityteam-salary.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="employee-salary" class="container tab-pane fade">
-                    <h3>Ini Employee Salary</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Employee Salary Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'employee-salary.php'; ?>
+                      </div>
+                    </div>
                   </div>
                 </aside>
             </div>
