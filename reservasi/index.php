@@ -102,8 +102,13 @@
                     </div>
                   </div>
                   <div id="transaction" class="container tab-pane fade">
-                    <h3>Ini Transaction</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>New Transaction Data</h3>
+                    <div class="row">
+                      <div class="col-sm-1"></div>
+                      <div class="col-sm-8">
+                        <?php include 'transaction.php'; ?>
+                      </div>
+                    </div>
                   </div>
                   <div id="thevenue" class="container tab-pane fade">
                     <h3>Ini The Venue</h3>
