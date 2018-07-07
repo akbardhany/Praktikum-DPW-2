@@ -61,9 +61,9 @@
       <td>get from session</td>
     </tr>
     <tr>
-      <td>Total Price</td>
+      <td>Total Price (IDR)</td>
       <td>:</td>
-      <td></td>
+      <td>get from data vendor selected</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
