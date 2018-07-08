@@ -60,14 +60,15 @@ DROP TABLE IF EXISTS `gaji_karyawan`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gaji_karyawan` (
   `id_gajiKaryawan` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) DEFAULT NULL,
+  `id_pegawai` int(11) DEFAULT NULL,
   `total_gajiKaryawan` int(16) DEFAULT NULL,
-  `waktu_bayarKaryawan` datetime DEFAULT NULL,
   `foto_karyawan` longblob,
+  `username_admin` varchar(100) DEFAULT NULL,
+  `waktu_bayarKaryawan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_gajiKaryawan`),
-  KEY `id_user` (`id_user`),
-  CONSTRAINT `gaji_karyawan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `id_pegawai` (`id_pegawai`),
+  CONSTRAINT `gaji_karyawan_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `pegawai` (`id_pegawai`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,12 +91,13 @@ CREATE TABLE `gaji_securityTeam` (
   `id_gajiSecurityTeam` int(11) NOT NULL AUTO_INCREMENT,
   `id_securityTeam` int(11) DEFAULT NULL,
   `total_gajiSecurityTeam` int(16) DEFAULT NULL,
-  `waktu_bayarSecurityTeam` datetime DEFAULT NULL,
   `foto_SecurityTeam` longblob,
+  `username_admin` varchar(100) DEFAULT NULL,
+  `waktu_bayarSecurityTeam` datetime DEFAULT NULL,
   PRIMARY KEY (`id_gajiSecurityTeam`),
   KEY `id_securityTeam` (`id_securityTeam`),
   CONSTRAINT `gaji_securityTeam_ibfk_1` FOREIGN KEY (`id_securityTeam`) REFERENCES `security_team` (`id_securityTeam`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +125,7 @@ CREATE TABLE `korlap` (
   `email_korlap` varchar(50) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_korlap`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +155,7 @@ CREATE TABLE `pegawai` (
   `foto_pegawai` longblob,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_pegawai`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +163,7 @@ CREATE TABLE `pegawai` (
 --
 
 LOCK TABLES `pegawai` WRITE;
-/*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;\
+/*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -225,7 +227,7 @@ CREATE TABLE `security_team` (
   `anggota_securityTeam` int(2) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_securityTeam`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -363,4 +365,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-08 21:29:00
+-- Dump completed on 2018-07-09  1:00:20
