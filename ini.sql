@@ -87,11 +87,12 @@ DROP TABLE IF EXISTS `gaji_securityTeam`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gaji_securityTeam` (
-  `id_gajiSecurityTeam` int(11) DEFAULT NULL,
+  `id_gajiSecurityTeam` int(11) NOT NULL AUTO_INCREMENT,
   `id_securityTeam` int(11) DEFAULT NULL,
   `total_gajiSecurityTeam` int(16) DEFAULT NULL,
   `waktu_bayarSecurityTeam` datetime DEFAULT NULL,
   `foto_SecurityTeam` longblob,
+  PRIMARY KEY (`id_gajiSecurityTeam`),
   KEY `id_securityTeam` (`id_securityTeam`),
   CONSTRAINT `gaji_securityTeam_ibfk_1` FOREIGN KEY (`id_securityTeam`) REFERENCES `security_team` (`id_securityTeam`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -142,17 +143,17 @@ DROP TABLE IF EXISTS `pegawai`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pegawai` (
-  `id_pegawai` varchar(20) NOT NULL,
+  `id_pegawai` int(11) NOT NULL AUTO_INCREMENT,
   `nama_pegawai` varchar(30) DEFAULT NULL,
   `nik_pegawai` int(16) DEFAULT NULL,
   `jk_pegawai` char(1) DEFAULT NULL,
-  `jabatan_pegawai` varchar(25) DEFAULT NULL,
+  `jabatan_pegawai` varchar(100) DEFAULT NULL,
   `alamat_pegawai` varchar(50) DEFAULT NULL,
   `notelp_pegawai` varchar(20) DEFAULT NULL,
   `foto_pegawai` longblob,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_pegawai`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -160,7 +161,7 @@ CREATE TABLE `pegawai` (
 --
 
 LOCK TABLES `pegawai` WRITE;
-/*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;\
 /*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,7 +250,7 @@ CREATE TABLE `tempat_acara` (
   `alamat_tempatAcara` varchar(100) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_tempatAcara`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -362,4 +363,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-08 18:25:24
+-- Dump completed on 2018-07-08 21:29:00
