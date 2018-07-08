@@ -37,6 +37,7 @@ CREATE TABLE `customer` (
   `nohp_customer` varchar(20) DEFAULT NULL,
   `email_customer` varchar(50) DEFAULT NULL,
   `noktp_customer` int(16) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_customer`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -61,7 +62,7 @@ CREATE TABLE `gaji_karyawan` (
   `id_gajiKaryawan` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) DEFAULT NULL,
   `total_gajiKaryawan` int(16) DEFAULT NULL,
-  `waktu_bayarKaryawan` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_bayarKaryawan` datetime DEFAULT NULL,
   `foto_karyawan` longblob,
   PRIMARY KEY (`id_gajiKaryawan`),
   KEY `id_user` (`id_user`),
@@ -89,7 +90,7 @@ CREATE TABLE `gaji_securityTeam` (
   `id_gajiSecurityTeam` int(11) DEFAULT NULL,
   `id_securityTeam` int(11) DEFAULT NULL,
   `total_gajiSecurityTeam` int(16) DEFAULT NULL,
-  `waktu_bayarSecurityTeam` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_bayarSecurityTeam` datetime DEFAULT NULL,
   `foto_SecurityTeam` longblob,
   KEY `id_securityTeam` (`id_securityTeam`),
   CONSTRAINT `gaji_securityTeam_ibfk_1` FOREIGN KEY (`id_securityTeam`) REFERENCES `security_team` (`id_securityTeam`)
@@ -118,6 +119,8 @@ CREATE TABLE `korlap` (
   `noktp_korlap` int(16) DEFAULT NULL,
   `nohp_korlap` varchar(20) DEFAULT NULL,
   `alamat_korlap` varchar(100) DEFAULT NULL,
+  `email_korlap` varchar(50) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_korlap`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -129,6 +132,36 @@ CREATE TABLE `korlap` (
 LOCK TABLES `korlap` WRITE;
 /*!40000 ALTER TABLE `korlap` DISABLE KEYS */;
 /*!40000 ALTER TABLE `korlap` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pegawai`
+--
+
+DROP TABLE IF EXISTS `pegawai`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pegawai` (
+  `id_pegawai` varchar(20) NOT NULL,
+  `nama_pegawai` varchar(30) DEFAULT NULL,
+  `nik_pegawai` int(16) DEFAULT NULL,
+  `jk_pegawai` char(1) DEFAULT NULL,
+  `jabatan_pegawai` varchar(25) DEFAULT NULL,
+  `alamat_pegawai` varchar(50) DEFAULT NULL,
+  `notelp_pegawai` varchar(20) DEFAULT NULL,
+  `foto_pegawai` longblob,
+  `waktu_pembuatan` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_pegawai`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pegawai`
+--
+
+LOCK TABLES `pegawai` WRITE;
+/*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -149,6 +182,7 @@ CREATE TABLE `reservasi` (
   `harga_total` int(16) DEFAULT NULL,
   `id_security` int(11) DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_reservasi`),
   KEY `id_customer` (`id_customer`),
   KEY `id_tempatAcara` (`id_tempatAcara`),
@@ -184,9 +218,11 @@ DROP TABLE IF EXISTS `security_team`;
 CREATE TABLE `security_team` (
   `id_securityTeam` int(11) NOT NULL AUTO_INCREMENT,
   `nama_securityTeam` varchar(50) DEFAULT NULL,
+  `noktp_securityTeam` varchar(16) DEFAULT NULL,
   `alamat_securityTeam` varchar(100) DEFAULT NULL,
   `nohp_securityTeam` varchar(20) DEFAULT NULL,
   `anggota_securityTeam` int(2) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_securityTeam`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -211,9 +247,9 @@ CREATE TABLE `tempat_acara` (
   `id_tempatAcara` int(11) NOT NULL AUTO_INCREMENT,
   `nama_tempatAcara` varchar(50) DEFAULT NULL,
   `alamat_tempatAcara` varchar(100) DEFAULT NULL,
-  `status_tempatAcara` varchar(50) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_tempatAcara`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -242,7 +278,7 @@ CREATE TABLE `transaksi` (
   `yang_dibayar` int(16) DEFAULT NULL,
   `sisa_bayar` int(16) DEFAULT NULL,
   `status_transaksi` varchar(50) DEFAULT NULL,
-  `waktu_transaksi` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `waktu_transaksi` datetime DEFAULT NULL,
   PRIMARY KEY (`id_transaksi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -265,12 +301,16 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_user` varchar(50) DEFAULT NULL,
   `username_user` varchar(10) DEFAULT NULL,
+  `nama_user` varchar(50) DEFAULT NULL,
   `alamat_user` varchar(255) DEFAULT NULL,
   `nohp_user` varchar(20) DEFAULT NULL,
+  `foto_user` longblob,
+  `pass_user` varchar(50) DEFAULT NULL,
+  `hakakses_user` varchar(30) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,11 +333,13 @@ CREATE TABLE `vendor` (
   `id_vendor` int(11) NOT NULL AUTO_INCREMENT,
   `nama_vendor` varchar(50) DEFAULT NULL,
   `pemilik_vendor` varchar(50) DEFAULT NULL,
+  `idpemilik_vendor` varchar(16) DEFAULT NULL,
   `alamat_vendor` varchar(100) DEFAULT NULL,
   `nohp_vendor` varchar(20) DEFAULT NULL,
   `email_vendor` varchar(50) DEFAULT NULL,
   `type_vendor` varchar(30) DEFAULT NULL,
   `harga_vendor` int(11) DEFAULT NULL,
+  `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_vendor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -320,4 +362,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-29 14:41:41
+-- Dump completed on 2018-07-08 18:25:24
