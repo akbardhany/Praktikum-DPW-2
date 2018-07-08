@@ -1,14 +1,9 @@
-<form class="" action="./config/data-employee.php" method="post">
+<form action="./config/data-employee.php" method="post" enctype="multipart/form-data">
   <table>
     <tr>
       <td>Employee Name</td>
       <td>:</td>
       <td><input type="text" name="employee-name" placeholder="Employee Name" required /></td>
-    </tr>
-    <tr>
-      <td>Employee Address</td>
-      <td>:</td>
-      <td><input type="text" name="employee-address" placeholder="Employee Address" required /></td>
     </tr>
     <tr>
       <td>Employee ID</td>
@@ -19,8 +14,8 @@
       <td>Gender of Employee</td>
       <td>:</td>
       <td>
-        <input type="radio" name="employee-gender" value="Male" required />Male
-        <input type="radio" name="employee-gender" value="Female" required />Female
+        <input type="radio" name="employee-gender" value="L" required />Male
+        <input type="radio" name="employee-gender" value="P" required />Female
       </td>
     </tr>
     <tr>
@@ -59,7 +54,9 @@
     <tr>
       <td>Photo of Employee</td>
       <td>:</td>
-      <td>soon (getUserMedia is so hard xoxo)</td>
+      <td>
+        <input type="file" name="employee-img" accept="image/*" required />
+      </td>
     </tr>
     <tr>
       <td>&nbsp;</td>

@@ -11,14 +11,14 @@
       <td><input type="number" name="fieldcoor-id" min="0" placeholder="16 digit" required /></td>
     </tr>
     <tr>
-      <td>Field Coor. Address</td>
-      <td>:</td>
-      <td><input type="text" name="fieldcoor-address" placeholder="Field Coor. Address" required /></td>
-    </tr>
-    <tr>
       <td>Field Coor. Phone</td>
       <td>:</td>
       <td><input type="tel" name="fieldcoor-phone" placeholder="+62" required /></td>
+    </tr>
+    <tr>
+      <td>Field Coor. Address</td>
+      <td>:</td>
+      <td><input type="text" name="fieldcoor-address" placeholder="Field Coor. Address" required /></td>
     </tr>
     <tr>
       <td>Field Coor. Email</td>

@@ -1,11 +1,23 @@
-<form class="" action="./config/data-secteamsalary.php" method="post">
+<form class="" action="./config/data-secteamsalary.php" method="post" enctype="multipart/form-data">
   <table>
     <tr>
       <td>ID of Sec. Officer</td>
       <td>:</td>
       <td>
         <select class="" name="id-security" required />
-        <option value="" disabled selected>Select from db</option>
+        <option value="0" disabled selected>Select One</option>
+        <?php
+          require_once '../connection.php';
+          $selSec = mysqli_query($conn, "SELECT nama_securityTeam, id_securityTeam FROM security_team");
+          while($row = mysqli_fetch_assoc($selSec))
+            {
+            ?>
+            <option value ="<?php echo $row['id_securityTeam'];?>" >
+                <?php echo $row['nama_securityTeam']; ?>
+            </option>
+            <?php
+            }
+         ?>
         </select>
       </td>
     </tr>
@@ -17,7 +29,7 @@
     <tr>
       <td>Photo of Security Officer</td>
       <td>:</td>
-      <td>soon (getUserMedia is so hard xoxo)</td>
+      <td><input type="file" name="img-security" accept="image/*" required /></td>
     </tr>
     <tr>
       <td>ID Admin</td>
