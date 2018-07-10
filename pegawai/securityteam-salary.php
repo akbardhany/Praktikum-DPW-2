@@ -7,7 +7,7 @@
         <select class="" name="id-security" required />
         <option value="0" disabled selected>Select One</option>
         <?php
-          require_once '../connection.php';
+          require '../connection.php';
           $selSec = mysqli_query($conn, "SELECT nama_securityTeam, id_securityTeam FROM security_team");
           while($row = mysqli_fetch_assoc($selSec))
             {
@@ -17,6 +17,7 @@
             </option>
             <?php
             }
+            mysqli_close($conn);
          ?>
         </select>
       </td>

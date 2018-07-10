@@ -7,7 +7,7 @@
         <select class="" name="idemployee" required />
         <option value="0" disabled selected>Select One</option>
         <?php
-          require_once '../connection.php';
+          require '../connection.php';
           $selPeg = mysqli_query($conn, "SELECT nama_pegawai, id_pegawai FROM pegawai");
           while($row = mysqli_fetch_assoc($selPeg))
             {
@@ -17,6 +17,7 @@
             </option>
             <?php
             }
+            mysqli_close($conn);
          ?>
         </select>
       </td>
