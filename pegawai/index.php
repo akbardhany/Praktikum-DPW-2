@@ -46,7 +46,7 @@
           <center>
               <ul class="nav nav-tabs col-sm-12" role="tablist">
                 <li class="nav-item col-sm-2">
-                  <a class="nav-link" data-toggle="tab" href="#select-employee">Employee</a>
+                  <a class="nav-link active" data-toggle="tab" href="#select-employee">Employee</a>
                 </li>
                 <li class="nav-item col-sm-3">
                   <a class="nav-link" data-toggle="tab" href="#select-fieldcoordinator">Field Coordinator</a>
@@ -64,30 +64,25 @@
           </center><br />
           <div class="row">
             <div class="col-sm-12 tab-content">
-              <div id="select-employee" class="container tab-pane fade">
+              <div id="select-employee" class="container tab-pane active">
                 <h3>Employee Data</h3>
-                <?php #include './config/select-employee.php'; ?>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include './config/select-employee.php';?>
               </div>
               <div id="select-fieldcoordinator" class="container tab-pane fade">
                 <h3>Field Coordinator Data</h3>
-                <?php #include './config/select-fieldcoordinator.php'; ?>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include './config/select-fieldcoordinator.php'; ?>
               </div>
               <div id="select-securityteam" class="container tab-pane fade">
                 <h3>Security Team Data</h3>
-                <?php #include './config/select-securityteam.php'; ?>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include './config/select-securityteam.php'; ?>
               </div>
               <div id="select-securitysalary" class="container tab-pane fade">
                 <h3>Security Team Salary Data</h3>
-                <?php #include './config/select-secteamsalary.php'; ?>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include './config/select-secteamsalary.php'; ?>
               </div>
               <div id="select-employeesalary" class="container tab-pane fade">
                 <h3>Employee Salary Data</h3>
-                <?php #include './config/select-employeesalary.php'; ?>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <?php include './config/select-employeesalary.php'; ?>
               </div>
             </div>
           </div>
