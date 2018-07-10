@@ -1,11 +1,13 @@
 <?php
-  require_once '../../connection.php';
+  include '../connection.php';
 
-  $selfieldco = mysqli_query($conn, "SELECT * FROM korlap");
+  $selectemployee = mysqli_query($conn, "SELECT * FROM korlap");
 
-  if ($selfieldco) {
+  if ($selectemployee) {
     // output data of each row
-    echo '<table border="1">';
+    echo '<div class="table-responsive">';
+    echo '<table class="table table-hover">';
+    echo '<thead>';
     echo '<tr>';
     echo '<td>'."ID".'</td>';
     echo '<td>'."NAME".'</td>';
@@ -15,7 +17,9 @@
     echo '<td>'."EMAIL".'</td>';
     echo '<td>'."TIME".'</td>';
     echo '</tr>';
-    while($baris = mysqli_fetch_assoc($selfieldco)) {
+    echo '<thead>';
+    while($baris = mysqli_fetch_assoc($selectemployee)) {
+      echo '<tbody>';
       echo '<tr>';
       echo '<td>'.$baris["id_korlap"].'</td>';
       echo '<td>'.$baris["nama_korlap"].'</td>';
@@ -25,10 +29,12 @@
       echo '<td>'.$baris["email_korlap"].'</td>';
       echo '<td>'.$baris["waktu_pembuatan"].'</td>';
       echo '</tr>';
+      echo '</tbody>';
     }
     echo '</table>';
+    echo '</div>';
   }else{
-    echo "0 results";
+    echo "not selected yet";
   }
 
   mysqli_close($conn);

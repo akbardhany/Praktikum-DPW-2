@@ -1,11 +1,13 @@
 <?php
-  require_once '../../connection.php';
+  require '../connection.php';
 
   $selsecteamsal = mysqli_query($conn, "SELECT * FROM gaji_securityTeam");
 
   if ($selsecteamsal) {
     // output data of each row
-    echo '<table border="1">';
+    echo '<div class="table-responsive">';
+    echo '<table class="table table-hover">';
+    echo '<thead>';
     echo '<tr>';
     echo '<td>'."ID".'</td>';
     echo '<td>'."ID SECURITY".'</td>';
@@ -14,19 +16,23 @@
     echo '<td>'."USERNAME ADMIN".'</td>';
     echo '<td>'."TIME".'</td>';
     echo '</tr>';
+    echo '<thead>';
     while($baris = mysqli_fetch_assoc($selsecteamsal)) {
+      echo '<tbody>';
       echo '<tr>';
       echo '<td>'.$baris["id_gajiSecurityTeam"].'</td>';
       echo '<td>'.$baris["id_securityTeam"].'</td>';
       echo '<td>'.$baris["total_gajiSecurityTeam"].'</td>';
-      echo '<td>'."<img src='../profile-photo/".$baris['foto_SecurityTeam']."' >".'</td>';
+      echo '<td>'."<img src='./profile-photo/".$baris['foto_SecurityTeam']."' >".'</td>';
       echo '<td>'.$baris["username_admin"].'</td>';
       echo '<td>'.$baris["waktu_bayarSecurityTeam"].'</td>';
       echo '</tr>';
+      echo '</tbody>';
     }
     echo '</table>';
+    echo '</div>';
   }else{
-    echo "0 results";
+    echo "not selected yet";
   }
 
   mysqli_close($conn);
