@@ -1,4 +1,4 @@
-<form class="" action="data-vendor.php" method="post">
+<form class="" action="./config/data-vendor.php" method="post">
   <table>
     <tr>
       <td>Vendor Name</td>
@@ -13,7 +13,7 @@
     <tr>
       <td>Vendor Owner ID</td>
       <td>:</td>
-      <td><input type="number" name="vendor-name" placeholder="16 digit" required /></td>
+      <td><input type="number" name="vendor-ownid" placeholder="16 digit" required /></td>
     </tr>
     <tr>
       <td>Vendor Address</td>
