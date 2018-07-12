@@ -1,4 +1,4 @@
-<form class="" action="data-venue.php" method="post">
+<form class="" action="./config/data-venue.php" method="post">
   <table>
     <tr>
       <td>Venue Name</td>
