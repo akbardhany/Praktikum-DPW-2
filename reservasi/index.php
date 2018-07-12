@@ -111,7 +111,7 @@
                     </div>
                   </div>
                   <div id="thevenue" class="container tab-pane fade">
-                    <h3>Ini The Venue</h3>
+                    <h3>New Venue Data</h3>
                     <div class="row">
                       <div class="col-sm-1"></div>
                       <div class="col-sm-8">
