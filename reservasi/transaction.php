@@ -1,11 +1,24 @@
-<form class="" action="data-transaction.php" method="post">
+<form class="" action="./config/data-transaction.php" method="post">
   <table>
     <tr>
       <td>ID Reservation</td>
       <td>:</td>
       <td>
         <select class="" name="id-reservation" required />
-          <option value="" disabled selected>Select from db</option>
+        <option disabled selected>Select One</option>
+        <?php
+          require '../connection.php';
+          $selCus = mysqli_query($conn, "SELECT id_reservasi FROM reservasi");
+          while($row = mysqli_fetch_assoc($selCus))
+            {
+            ?>
+            <option value ="<?php echo $row['id_reservasi'];?>" >
+                <?php echo $row['id_reservasi']; ?>
+            </option>
+            <?php
+            }
+            mysqli_close($conn);
+         ?>
         </select>
       </td>
     </tr>
@@ -40,6 +53,17 @@
       <td>The Remaining Pay (IDR)</td>
       <td>:</td>
       <td><input type="number" name="remaining-pay" min="0" placeholder="u must fill out" /></td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>:</td>
+      <td>
+        <select class="" name="status-transaction">
+          <option disabled selected>Select One</option>
+          <option value="Paid Off">Paid Off</option>
+          <option value="Not Yet Paid Off">Not Yet Paid Off</option>
+        </select>
+      </td>
     </tr>
     <tr>
       <td>&nbsp;</td>
