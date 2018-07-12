@@ -1,4 +1,4 @@
-<form class="" action="data-customer.php" method="post">
+<form class="" action="./config/data-customer.php" method="post">
   <table>
     <tr>
       <td>Customer Name</td>
@@ -8,7 +8,7 @@
     <tr>
       <td>Customer ID</td>
       <td>:</td>
-      <td><input type="number" name="customer-name" min="0" placeholder="16 digit" required /></td>
+      <td><input type="number" name="customer-id" min="0" placeholder="16 digit" required /></td>
     </tr>
     <tr>
       <td>Customer Address</td>
