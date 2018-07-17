@@ -43,6 +43,49 @@
       <div class="tab-content">
         <div id="Home" class="container tab-pane active"><br>
           <h3>Welcome to Blue's Rose E.O. Data Center</h3>
+          <center>
+              <ul class="nav nav-tabs col-sm-12" role="tablist">
+                <li class="nav-item col-sm-2">
+                  <a class="nav-link" data-toggle="tab" href="#select-customer">Customer</a>
+                </li>
+                <li class="nav-item col-sm-3">
+                  <a class="nav-link" data-toggle="tab" href="#select-vendor">Vendor</a>
+                </li>
+                <li class="nav-item col-sm-2">
+                  <a class="nav-link" data-toggle="tab" href="#select-reservation">Reservation</a>
+                </li>
+                <li class="nav-item col-sm-3">
+                  <a class="nav-link" data-toggle="tab" href="#select-transaction">Transaction</a>
+                </li>
+                <li class="nav-item col-sm-2">
+                  <a class="nav-link" data-toggle="tab" href="#select-thevenue">The Venue</a>
+                </li>
+              </ul>
+          </center><br />
+          <div class="row">
+            <div class="col-sm-12 tab-content">
+              <div id="select-customer" class="container tab-pane fade">
+                <h3>Customer Data</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div id="select-vendor" class="container tab-pane fade">
+                <h3>Vendor Data</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div id="select-reservation" class="container tab-pane fade">
+                <h3>Reservation Data</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div id="select-transaction" class="container tab-pane fade">
+                <h3>Transaction Data</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div id="select-thevenue" class="container tab-pane fade">
+                <h3>The Venue Data</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
         </div><br />
         <div id="NewData" class="container tab-pane fade"><br>
           <div class="row">
@@ -130,7 +173,7 @@
         </div>
       </div>
       <div class="container modal-footer">
-        &copy; AkbarDhany 2018 All Rights Reserved.
+        <i>&copy; scrup<sup>2</sup>&nbsp;2018 All Rights Reserved.</i>
       </div>
     </div>
   </body>
