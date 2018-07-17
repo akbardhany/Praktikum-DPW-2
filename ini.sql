@@ -250,9 +250,10 @@ CREATE TABLE `tempat_acara` (
   `id_tempatAcara` int(11) NOT NULL AUTO_INCREMENT,
   `nama_tempatAcara` varchar(50) DEFAULT NULL,
   `alamat_tempatAcara` varchar(100) DEFAULT NULL,
+  `foto_tempatAcara` longblob,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_tempatAcara`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -342,10 +343,11 @@ CREATE TABLE `vendor` (
   `nohp_vendor` varchar(20) DEFAULT NULL,
   `email_vendor` varchar(50) DEFAULT NULL,
   `type_vendor` varchar(30) DEFAULT NULL,
+  `foto_vendor` longblob,
   `harga_vendor` int(11) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_vendor`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -366,4 +368,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-12 20:04:15
+-- Dump completed on 2018-07-17 23:16:10
