@@ -1,4 +1,4 @@
-<form class="" action="./config/data-vendor.php" method="post">
+<form class="" action="./config/data-vendor.php" method="post" enctype="multipart/form-data">
   <table>
     <tr>
       <td>Vendor Name</td>
@@ -39,6 +39,13 @@
           <option value="food">Food</option>
           <option value="makeup">Make Up</option>
         </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Product Image</td>
+      <td>:</td>
+      <td>
+        <input type="file" name="vendor-img" accept="image/*" required />
       </td>
     </tr>
     <tr>
