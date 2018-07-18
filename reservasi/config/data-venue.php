@@ -12,7 +12,7 @@
   }else {
   $dv = mysqli_query($conn, "INSERT INTO tempat_acara (nama_tempatAcara, alamat_tempatAcara, foto_tempatAcara, waktu_pembuatan) VALUES ('$vename','$veaddr','$veImg',now())");
   }
-  if ($dv) {
+  if ($dv && move_uploaded_file($_FILES['venue-img']['tmp_name'], $targetfolder)) {
     header("location: ../../reservasi/");
   }
   mysqli_close($conn);
