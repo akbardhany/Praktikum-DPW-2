@@ -166,11 +166,6 @@
             </div>
           </div>
         </div>
-        <div id="Contact" class="container tab-pane fade"><br>
-          <div class="row">
-
-          </div>
-        </div>
       </div>
       <div class="container modal-footer">
         <i>&copy; scrup<sup>2</sup>&nbsp;2018 All Rights Reserved.</i>
