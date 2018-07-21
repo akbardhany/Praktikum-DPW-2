@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+  include "../connection.php";
+    session_start();
+      if (empty($_SESSION['username'])){
+        header("Location:../../login.php");
+      }
+?>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
