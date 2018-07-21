@@ -29,7 +29,7 @@
       echo '<td>'.$baris["nohp_customer"].'</td>';
       echo '<td>'.$baris["email_customer"].'</td>';
       echo '<td>'.$baris["waktu_pembuatan"].'</td>';
-      echo '<td>'.'<a href="./config/edit-customer.php?update='.$baris["id_customer"].'">'.'<i class="fa fa-pencil" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
+      echo '<td>'.'<a href="./config/edit-customer.php?update='.$baris["id_customer"].'">'.'<i class="fa fa-pencil" aria-hidden="true">'.'</i>'.'</a>'."&nbsp;&nbsp;".'<a href="./config/delete-customer.php?delete='.$baris["id_customer"].'">'.'<i class="fa fa-trash text-danger" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
       echo '</tr>';
       echo '</tbody>';
     }
