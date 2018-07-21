@@ -7,21 +7,20 @@
   $conReserv   = $_POST['con-reservation'];
   $idfcReserv  = $_POST['idfieldco-reservation'];
   $idstReserv  = $_POST['idsete-reservation'];
-  $idadmReserv = "3";
+  $idadmReserv = "dari session";
   $tpReserv    = "3";
 
   if ($idcReserv == null && $timeEvt == null && $idvenReserv == null && $idvdReserv == null && $conReserv == null && $idfcReserv == null && $idstReserv == null) {
     echo '<tt>'."u haven't filled out the data".'</tt>';
     header("refresh:1.5 ; ../../reservasi");
   }else {
-  $dres = mysqli_query($conn, "INSERT INTO reservasi (id_customer, waktu_acara, id_tempatAcara, id_vendor, konsep_acara, id_korlap, id_security, id_user, harga_total, waktu_pembuatan) VALUES ($idcReserv,'$timeEvt',$idvenReserv,$idvdReserv,'$conReserv',$idfcReserv,$idstReserv,$idadmReserv,$tpReserv,now())");
+  $dres = mysqli_query($conn, "INSERT INTO reservasi (id_customer, waktu_acara, id_tempatAcara, id_vendor, konsep_acara, id_korlap, id_securityTeam, username_admin, harga_total, waktu_pembuatan) VALUES ($idcReserv,'$timeEvt',$idvenReserv,$idvdReserv,'$conReserv',$idfcReserv,$idstReserv,'$idadmReserv',$tpReserv,now())");
   }
 
   if ($dres) {
     header("location: ../../reservasi/");
   }else {
     echo "Error Data";
-    header("refresh: 2 ; ../../reservasi/");
   }
 
   mysqli_close($conn);

@@ -32,8 +32,8 @@
       echo '<td>'.$baris["id_vendor"].'</td>';
       echo '<td>'.$baris["konsep_acara"].'</td>';
       echo '<td>'.$baris["id_korlap"].'</td>';
-      echo '<td>'.$baris["id_security"].'</td>';
-      echo '<td>'.$baris["id_user"].'</td>';
+      echo '<td>'.$baris["id_securityTeam"].'</td>';
+      echo '<td>'.$baris["username_admin"].'</td>';
       echo '<td>'.$baris["harga_total"].'</td>';
       echo '<td>'.$baris["waktu_pembuatan"].'</td>';
       echo '</tr>';
