@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+  include "../connection.php";
+    session_start();
+      if (empty($_SESSION['username'])){
+        header("Location:../login.php");
+      }
+?>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +43,7 @@
               <a class="nav-link" data-toggle="tab" href="#NewData">New Data</a>
             </li>
             <li class="nav-item col-sm-2">
-              <a class="nav-link" data-toggle="tab" href="">Logout</a>
+              <a class="nav-link" href="../logout.php">Logout</a>
             </li>
           </ul>
         </div>
