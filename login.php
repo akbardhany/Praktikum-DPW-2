@@ -25,6 +25,18 @@
                <td><input type="text" name="user_name" placeholder="Username" required /></td>
              </tr>
              <tr>
+               <td>Permissions</td>
+               <td>:</td>
+               <td>
+                 <select class="" name="permissions" required />
+                   <option value="" disabled selected>Select One</option>
+                   <option value="Bos">Boss</option>
+                   <option value="Admin Pegawai">Admin Pegawai</option>
+                   <option value="Admin Reservasi">Admin Reservasi</option>
+                 </select>
+               </td>
+             </tr>
+             <tr>
                <td>Password</td>
                <td>:</td>
                <td><input type="password" name="password" placeholder="Password" required /></td>
