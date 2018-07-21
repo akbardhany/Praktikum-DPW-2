@@ -39,7 +39,7 @@ CREATE TABLE `customer` (
   `email_customer` varchar(50) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_customer`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `gaji_karyawan` (
   PRIMARY KEY (`id_gajiKaryawan`),
   KEY `id_pegawai` (`id_pegawai`),
   CONSTRAINT `gaji_karyawan_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `pegawai` (`id_pegawai`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +97,7 @@ CREATE TABLE `gaji_securityTeam` (
   PRIMARY KEY (`id_gajiSecurityTeam`),
   KEY `id_securityTeam` (`id_securityTeam`),
   CONSTRAINT `gaji_securityTeam_ibfk_1` FOREIGN KEY (`id_securityTeam`) REFERENCES `security_team` (`id_securityTeam`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +125,7 @@ CREATE TABLE `korlap` (
   `email_korlap` varchar(50) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_korlap`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +155,7 @@ CREATE TABLE `pegawai` (
   `foto_pegawai` longblob,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_pegawai`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,8 +182,8 @@ CREATE TABLE `reservasi` (
   `id_vendor` int(11) DEFAULT NULL,
   `konsep_acara` varchar(100) DEFAULT NULL,
   `id_korlap` int(11) DEFAULT NULL,
-  `id_security` int(11) DEFAULT NULL,
-  `id_user` int(11) DEFAULT NULL,
+  `id_securityTeam` int(11) DEFAULT NULL,
+  `username_admin` varchar(100) DEFAULT NULL,
   `harga_total` int(16) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_reservasi`),
@@ -191,15 +191,13 @@ CREATE TABLE `reservasi` (
   KEY `id_tempatAcara` (`id_tempatAcara`),
   KEY `id_vendor` (`id_vendor`),
   KEY `id_korlap` (`id_korlap`),
-  KEY `id_security` (`id_security`),
-  KEY `id_user` (`id_user`),
+  KEY `id_securityTeam` (`id_securityTeam`),
   CONSTRAINT `reservasi_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id_customer`),
   CONSTRAINT `reservasi_ibfk_2` FOREIGN KEY (`id_tempatAcara`) REFERENCES `tempat_acara` (`id_tempatAcara`),
   CONSTRAINT `reservasi_ibfk_3` FOREIGN KEY (`id_vendor`) REFERENCES `vendor` (`id_vendor`),
   CONSTRAINT `reservasi_ibfk_4` FOREIGN KEY (`id_korlap`) REFERENCES `korlap` (`id_korlap`),
-  CONSTRAINT `reservasi_ibfk_5` FOREIGN KEY (`id_security`) REFERENCES `security_team` (`id_securityTeam`),
-  CONSTRAINT `reservasi_ibfk_6` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+  CONSTRAINT `reservasi_ibfk_7` FOREIGN KEY (`id_securityTeam`) REFERENCES `security_team` (`id_securityTeam`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,7 +225,7 @@ CREATE TABLE `security_team` (
   `anggota_securityTeam` int(2) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_securityTeam`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -253,7 +251,7 @@ CREATE TABLE `tempat_acara` (
   `foto_tempatAcara` longblob,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_tempatAcara`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -285,7 +283,7 @@ CREATE TABLE `transaksi` (
   PRIMARY KEY (`id_transaksi`),
   KEY `id_reservasi` (`id_reservasi`),
   CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`id_reservasi`) REFERENCES `reservasi` (`id_reservasi`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -315,7 +313,7 @@ CREATE TABLE `user` (
   `hakakses_user` varchar(30) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -347,7 +345,7 @@ CREATE TABLE `vendor` (
   `harga_vendor` int(11) DEFAULT NULL,
   `waktu_pembuatan` datetime DEFAULT NULL,
   PRIMARY KEY (`id_vendor`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -368,4 +366,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-17 23:16:10
+-- Dump completed on 2018-07-21 17:42:18
