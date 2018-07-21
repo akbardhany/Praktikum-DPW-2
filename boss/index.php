@@ -42,116 +42,146 @@
         </div>
       </nav></center>
       <div class="tab-content">
-        <div id="Home" class="container tab-pane active"><br>
-          <h3>Welcome to Blue's Rose E.O. Data Center</h3>
-          <center>
-              <ul class="nav nav-tabs" role="tablist">
+        <div id="Home" class="container tab-pane active">
+          <div class="row">
+            <div class="col-sm-8">
+              <h3>Welcome to Blue's Rose E.O. Data Center</h3>
+              <hr />
+            </div>
+            <div class="col-sm-4"></div>
+          </div>
+          <div class="row">
+            <aside class="col-sm-3">
+              <ul class="nav nav-link" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#customer">Customer</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-admin">Admin</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#vendor">Vendor</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-customer">Customer</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#reservation">Reservation</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-vendor">Vendor</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#transaction">Transaction</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-reservation">Reservation</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#thevenue">The Venue</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-transaction">Transaction</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#employee">Employee</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-thevenue">The Venue</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#field-coordinator">Field Coordinator</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-employee">Employee</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#security-team">Security Team</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-field-coordinator">Field Coordinator</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#employee-salary">Employee Salary</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-security-team">Security Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#security-salary">Salary of The Security Team</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-security-salary">Salary of The Security Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#admin">Admin</a>
+                  <a class="nav-link" data-toggle="tab" href="#select-employee-salary">Employee Salary</a>
                 </li>
               </ul>
-          </center><br />
-          <div class="row">
-            <div class="col-sm-12 tab-content">
-              <div id="customer" class="container tab-pane fade">
-                <h3>Customer Data</h3>
-                  <div class="col-sm-12">
-                    <?php include './config/select-customer.php'; ?>
+            </aside>
+            <div class="col-sm-9">
+              <article class="tab-content">
+                <div id="select-admin" class="container tab-pane fade">
+                  <h3>Admin Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-admin.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="vendor" class="container tab-pane fade">
-                <h3>Vendor Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-customer" class="container tab-pane fade">
+                  <h3>Customer Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-customer.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="reservation" class="container tab-pane fade">
-                <h3>Reservation Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-vendor" class="container tab-pane fade">
+                  <h3>Vendor Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-vendor.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="transaction" class="container tab-pane fade">
-                <h3>Transaction Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-reservation" class="container tab-pane fade">
+                  <h3>Reservation Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-reservation.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="thevenue" class="container tab-pane fade">
-                <h3>Venue Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-transaction" class="container tab-pane fade">
+                  <h3>Transaction Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-transaction.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="employee" class="container tab-pane fade">
-                <h3>Employee Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-thevenue" class="container tab-pane fade">
+                  <h3>Venue Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-venue.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="field-coordinator" class="container tab-pane fade">
-                <h3>Field-Coordinator Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-employee" class="container tab-pane fade">
+                  <h3>Employee Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-employee.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="security-team" class="container tab-pane fade">
-                <h3>Security Team Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-field-coordinator" class="container tab-pane fade">
+                  <h3>Field Coordinator Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-fieldcoordinator.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="employee-salary" class="container tab-pane fade">
-                <h3>Employee Salary Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-security-team" class="container tab-pane fade">
+                  <h3>Security Team Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-securityteam.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="security-salary" class="container tab-pane fade">
-                <h3>Security Team Salary Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-security-salary" class="container tab-pane fade">
+                  <h3>Security Salary Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-secsalary.php'; ?>
+                    </div>
                   </div>
-              </div>
-              <div id="admin" class="container tab-pane fade">
-                <h3>Admin Data</h3>
-                  <div class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="select-employee-salary" class="container tab-pane fade">
+                  <h3>Employee Salary Data</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <?php include './config/select-employeesalary.php'; ?>
+                    </div>
                   </div>
-              </div>
+                </div>
+              </article>
             </div>
           </div>
-        </div><br />
+        </div>
         <div id="NewData" class="container tab-pane fade">
           <div class="row">
             <div class="col-sm-7">
@@ -302,7 +332,7 @@
                 </aside>
             </div>
           </div>
-        </div>
+      </div>
       <div class="container modal-footer">
         <i>&copy; scrup<sup>2</sup>&nbsp;2018 All Rights Reserved.</i>
       </div>
