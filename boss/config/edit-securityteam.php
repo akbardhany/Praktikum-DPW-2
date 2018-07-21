@@ -18,47 +18,47 @@
           <img class="animate" src="../../img/ico-x.png" alt="Narotama Logo" width="100px" height="100px" draggable="false" style="pointer-events:none">
         </div>
       </div>
-          <h3>EDIT DATA CUSTOMER</h3>
+          <h3>EDIT DATA SECURITY TEAM</h3>
           <?php
             require '../../connection.php';
             $upd = $_GET['update'];
-            $selectcustomer = mysqli_query($conn, "SELECT * FROM customer WHERE id_customer=$upd");
+            $selectst = mysqli_query($conn, "SELECT * FROM security_team WHERE id_securityTeam=$upd");
 
-            if ($selectcustomer) {
+            if ($selectst) {
 
-              while($baris = mysqli_fetch_assoc($selectcustomer)) {
+              while($baris = mysqli_fetch_assoc($selectst)) {
                 ?>
-                <form class="" action="update-customer.php" method="post">
+                <form class="" action="update-securityteam.php" method="post">
                   <table>
                     <tr>
-                      <td>ID CUSTOMER</td>
+                      <td>ID</td>
                       <td>:</td>
-                      <td><input type="number" name="id-customer" value="<?php echo $baris['id_customer']; ?>" readonly /></td>
+                      <td><input type="number" min="0" name="st-id" value="<?php echo $baris['id_securityTeam']; ?>" readonly /></td>
                     </tr>
                     <tr>
-                      <td>Customer Name</td>
+                      <td>Name</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-name" value="<?php echo $baris['nama_customer']; ?>" required /></td>
+                      <td><input type="text" name="st-name" value="<?php echo $baris['nama_securityTeam']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer ID</td>
+                      <td>NIK</td>
                       <td>:</td>
-                      <td><input type="number" name="customer-id" min="0" value="<?php echo $baris['noktp_customer']; ?>" required /></td>
+                      <td><input type="number" min="0" name="st-nik" min="0" value="<?php echo $baris['noktp_securityTeam']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Address</td>
+                      <td>Address</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-address" value="<?php echo $baris['alamat_customer']; ?>" required /></td>
+                      <td><input type="text" name="st-address" value="<?php echo $baris['alamat_securityTeam']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Phone</td>
+                      <td>Phone</td>
                       <td>:</td>
-                      <td><input type="tel" name="customer-phone" value="<?php echo $baris['nohp_customer']; ?>" required /></td>
+                      <td><input type="tel" name="st-phone" value="<?php echo $baris['nohp_securityTeam']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Email</td>
+                      <td>Member</td>
                       <td>:</td>
-                      <td><input type="email" name="customer-email" value="<?php echo $baris['email_customer']; ?>" required /></td>
+                      <td><input type="number" name="st-member" value="<?php echo $baris['anggota_securityTeam']; ?>" required /></td>
                     </tr>
                     <tr>
                       <td>Last Update</td>

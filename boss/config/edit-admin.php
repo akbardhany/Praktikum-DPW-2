@@ -18,50 +18,70 @@
           <img class="animate" src="../../img/ico-x.png" alt="Narotama Logo" width="100px" height="100px" draggable="false" style="pointer-events:none">
         </div>
       </div>
-          <h3>EDIT DATA CUSTOMER</h3>
+          <h3>EDIT DATA ADMIN</h3>
           <?php
             require '../../connection.php';
             $upd = $_GET['update'];
-            $selectcustomer = mysqli_query($conn, "SELECT * FROM customer WHERE id_customer=$upd");
+            $selectuser = mysqli_query($conn, "SELECT * FROM user WHERE id_user=$upd");
 
-            if ($selectcustomer) {
+            if ($selectuser) {
 
-              while($baris = mysqli_fetch_assoc($selectcustomer)) {
+              while($baris = mysqli_fetch_array($selectuser)) {
                 ?>
-                <form class="" action="update-customer.php" method="post">
+                <form class="" action="update-admin.php" method="post" enctype="multipart/form-data">
                   <table>
                     <tr>
-                      <td>ID CUSTOMER</td>
+                      <td>ID ADMIN</td>
                       <td>:</td>
-                      <td><input type="number" name="id-customer" value="<?php echo $baris['id_customer']; ?>" readonly /></td>
+                      <td><input type="number" name="admin-id" value="<?php echo $baris['id_user']; ?>" readonly /></td>
                     </tr>
                     <tr>
-                      <td>Customer Name</td>
+                      <td>USERNAME (ID)</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-name" value="<?php echo $baris['nama_customer']; ?>" required /></td>
+                      <td><input type="text" name="admin-username" value="<?php echo $baris['username_user']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer ID</td>
+                      <td>NAME</td>
                       <td>:</td>
-                      <td><input type="number" name="customer-id" min="0" value="<?php echo $baris['noktp_customer']; ?>" required /></td>
+                      <td><input type="text" name="admin-name" value="<?php echo $baris['nama_user']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Address</td>
+                      <td>ADMIN ADDRESS</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-address" value="<?php echo $baris['alamat_customer']; ?>" required /></td>
+                      <td><input type="text" name="admin-address" value="<?php echo $baris['alamat_user']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Phone</td>
+                      <td>ADMIN PHONE</td>
                       <td>:</td>
-                      <td><input type="tel" name="customer-phone" value="<?php echo $baris['nohp_customer']; ?>" required /></td>
+                      <td><input type="tel" name="admin-phone" value="<?php echo $baris['nohp_user']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Email</td>
+                      <td>PHOTO</td>
                       <td>:</td>
-                      <td><input type="email" name="customer-email" value="<?php echo $baris['email_customer']; ?>" required /></td>
+                      <td>
+                        <input type="file" name="admin-photo" accept="image/*" required />
+                        <input name="y" type="hidden" id="y" value="<? $baris['foto_user'];?>" /></td>
+                      </td>
+                      <?php echo '<td>'."Last Photo: "."<img src='../pictures/".$baris['foto_user']."' >".'</td>'; ?>
                     </tr>
                     <tr>
-                      <td>Last Update</td>
+                      <td>ADMIN PASSWORD</td>
+                      <td>:</td>
+                      <td><input type="password" name="admin-password" value="<?php echo $baris['pass_user']; ?>" required /></td>
+                    </tr>
+                    <tr>
+                      <td>Permissions</td>
+                      <td>:</td>
+                      <td>
+                        <select class="" name="admin-permissions" required />
+                          <option value="<?php echo $baris['hakakses_user']; ?>" selected><?php echo $baris['hakakses_user']; ?></option>
+                          <option value="Admin Pegawai">Admin Pegawai</option>
+                          <option value="Admin Reservasi">Admin Reservasi</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LAST UPDATE</td>
                       <td>:</td>
                       <td><input type="text" value="<?php echo $baris['waktu_pembuatan']; ?>" readonly /></td>
                     </tr>
@@ -71,6 +91,7 @@
                       <td>&nbsp;</td>
                     </tr>
                     <tr>
+                      <td></td>
                       <td></td>
                       <td></td>
                       <td align="right">

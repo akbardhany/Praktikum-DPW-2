@@ -18,47 +18,47 @@
           <img class="animate" src="../../img/ico-x.png" alt="Narotama Logo" width="100px" height="100px" draggable="false" style="pointer-events:none">
         </div>
       </div>
-          <h3>EDIT DATA CUSTOMER</h3>
+          <h3>EDIT DATA FIELD COORDINATOR</h3>
           <?php
             require '../../connection.php';
             $upd = $_GET['update'];
-            $selectcustomer = mysqli_query($conn, "SELECT * FROM customer WHERE id_customer=$upd");
+            $selectfc = mysqli_query($conn, "SELECT * FROM korlap WHERE id_korlap=$upd");
 
-            if ($selectcustomer) {
+            if ($selectfc) {
 
-              while($baris = mysqli_fetch_assoc($selectcustomer)) {
+              while($baris = mysqli_fetch_assoc($selectfc)) {
                 ?>
-                <form class="" action="update-customer.php" method="post">
+                <form class="" action="update-fieldcoordinator.php" method="post">
                   <table>
                     <tr>
-                      <td>ID CUSTOMER</td>
+                      <td>ID</td>
                       <td>:</td>
-                      <td><input type="number" name="id-customer" value="<?php echo $baris['id_customer']; ?>" readonly /></td>
+                      <td><input type="number" min="0" name="fc-id" value="<?php echo $baris['id_korlap']; ?>" readonly /></td>
                     </tr>
                     <tr>
-                      <td>Customer Name</td>
+                      <td>Name</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-name" value="<?php echo $baris['nama_customer']; ?>" required /></td>
+                      <td><input type="text" name="fc-name" value="<?php echo $baris['nama_korlap']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer ID</td>
+                      <td>NIK</td>
                       <td>:</td>
-                      <td><input type="number" name="customer-id" min="0" value="<?php echo $baris['noktp_customer']; ?>" required /></td>
+                      <td><input type="number" min="0" name="fc-nik" min="0" value="<?php echo $baris['noktp_korlap']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Address</td>
+                      <td>Phone</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-address" value="<?php echo $baris['alamat_customer']; ?>" required /></td>
+                      <td><input type="tel" name="fc-phone" value="<?php echo $baris['nohp_korlap']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Phone</td>
+                      <td>Address</td>
                       <td>:</td>
-                      <td><input type="tel" name="customer-phone" value="<?php echo $baris['nohp_customer']; ?>" required /></td>
+                      <td><input type="text" name="fc-address" value="<?php echo $baris['alamat_korlap']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Email</td>
+                      <td> Email</td>
                       <td>:</td>
-                      <td><input type="email" name="customer-email" value="<?php echo $baris['email_customer']; ?>" required /></td>
+                      <td><input type="email" name="fc-email" value="<?php echo $baris['email_korlap']; ?>" required /></td>
                     </tr>
                     <tr>
                       <td>Last Update</td>

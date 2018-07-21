@@ -18,47 +18,67 @@
           <img class="animate" src="../../img/ico-x.png" alt="Narotama Logo" width="100px" height="100px" draggable="false" style="pointer-events:none">
         </div>
       </div>
-          <h3>EDIT DATA CUSTOMER</h3>
+          <h3>EDIT DATA RESERVATION</h3>
           <?php
             require '../../connection.php';
             $upd = $_GET['update'];
-            $selectcustomer = mysqli_query($conn, "SELECT * FROM customer WHERE id_customer=$upd");
+            $selectreservation = mysqli_query($conn, "SELECT * FROM reservasi WHERE id_reservasi=$upd");
 
-            if ($selectcustomer) {
+            if ($selectreservation) {
 
-              while($baris = mysqli_fetch_assoc($selectcustomer)) {
+              while($baris = mysqli_fetch_assoc($selectreservation)) {
                 ?>
-                <form class="" action="update-customer.php" method="post">
+                <form class="" action="update-reservation.php" method="post">
                   <table>
+                    <tr>
+                      <td>ID RESERVATION</td>
+                      <td>:</td>
+                      <td><input type="number" name="id-reservasi" value="<?php echo $baris['id_reservasi']; ?>" readonly /></td>
+                    </tr>
                     <tr>
                       <td>ID CUSTOMER</td>
                       <td>:</td>
                       <td><input type="number" name="id-customer" value="<?php echo $baris['id_customer']; ?>" readonly /></td>
                     </tr>
                     <tr>
-                      <td>Customer Name</td>
+                      <td>TIME of THE EVENT</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-name" value="<?php echo $baris['nama_customer']; ?>" required /></td>
+                      <td><input type="text" name="time-event" value="<?php echo $baris['waktu_acara']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer ID</td>
+                      <td>ID THE VENUE</td>
                       <td>:</td>
-                      <td><input type="number" name="customer-id" min="0" value="<?php echo $baris['noktp_customer']; ?>" required /></td>
+                      <td><input type="number" min="1" name="id-venue" value="<?php echo $baris['id_tempatAcara']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Address</td>
+                      <td>ID VENDOR</td>
                       <td>:</td>
-                      <td><input type="text" name="customer-address" value="<?php echo $baris['alamat_customer']; ?>" required /></td>
+                      <td><input type="number" min="1" name="id-vendor" value="<?php echo $baris['id_vendor']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Phone</td>
+                      <td>CONCEPT</td>
                       <td>:</td>
-                      <td><input type="tel" name="customer-phone" value="<?php echo $baris['nohp_customer']; ?>" required /></td>
+                      <td><input type="text" name="concept" value="<?php echo $baris['konsep_acara']; ?>" required /></td>
                     </tr>
                     <tr>
-                      <td>Customer Email</td>
+                      <td>ID FIELD COORDINATOR</td>
                       <td>:</td>
-                      <td><input type="email" name="customer-email" value="<?php echo $baris['email_customer']; ?>" required /></td>
+                      <td><input type="number" name="id-korlap" value="<?php echo $baris['id_korlap']; ?>" readonly /></td>
+                    </tr>
+                    <tr>
+                      <td>ID SECURITY TEAM</td>
+                      <td>:</td>
+                      <td><input type="number" name="id-secteam" value="<?php echo $baris['id_securityTeam']; ?>" readonly /></td>
+                    </tr>
+                    <tr>
+                      <td>ID ADMIN</td>
+                      <td>:</td>
+                      <td><input type="text" name="id-admin" value="<?php echo $baris['username_admin']; ?>" readonly /></td>
+                    </tr>
+                    <tr>
+                      <td>TOTAL PRICE (IDR)</td>
+                      <td>:</td>
+                      <td><input type="number" name="total-price" value="<?php echo $baris['harga_total']; ?>" readonly /></td>
                     </tr>
                     <tr>
                       <td>Last Update</td>
