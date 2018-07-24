@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel='shortcut icon' type='image/x-icon' href='../img/ico-x.png' />
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.js"></script>
     <script src="../js/bootstrap.min.js"></script>
