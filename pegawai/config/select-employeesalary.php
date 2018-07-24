@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selempsal = mysqli_query($conn, "SELECT * FROM gaji_karyawan");
+  $selempsal = mysqli_query($conn, "SELECT * FROM gaji_karyawan ORDER BY 1 DESC");
 
   if ($selempsal) {
     // output data of each row

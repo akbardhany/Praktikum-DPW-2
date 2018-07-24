@@ -1,7 +1,7 @@
 <?php
   include '../connection.php';
 
-  $selectemployee = mysqli_query($conn, "SELECT * FROM korlap");
+  $selectemployee = mysqli_query($conn, "SELECT * FROM korlap ORDER BY 1 DESC");
 
   if ($selectemployee) {
     // output data of each row
