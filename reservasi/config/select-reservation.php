@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selectreservation = mysqli_query($conn, "SELECT * FROM reservasi");
+  $selectreservation = mysqli_query($conn, "SELECT * FROM reservasi ORDER BY 1 DESC");
 
   if ($selectreservation) {
     // output data of each row
