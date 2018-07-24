@@ -20,14 +20,17 @@
           if ($perm == $row['hakakses_user']) {
             if ($perm == "Bos") {
               $_SESSION['username']=$uname;
+              $_SESSION['hak']=$perm;
               echo "Loading, please wait ...";
               header("refresh:1.5 ; ./boss");
             }elseif ($perm == "Admin Pegawai") {
               $_SESSION['username']=$uname;
+              $_SESSION['hak']=$perm;
               echo "Loading, please wait ...";
               header("refresh:1.5 ; ./pegawai");
             }else {
               $_SESSION['username']=$uname;
+              $_SESSION['hak']=$perm;
               echo "Loading, please wait ...";
               header("refresh:1.5 ; ./reservasi");
             }
