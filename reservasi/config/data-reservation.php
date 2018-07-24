@@ -7,7 +7,7 @@
   $conReserv   = $_POST['con-reservation'];
   $idfcReserv  = $_POST['idfieldco-reservation'];
   $idstReserv  = $_POST['idsete-reservation'];
-  $idadmReserv = "dari session";
+  $idadmReserv = $_POST['uname-admin'];
   $tpReserv    = "3";
 
   if ($idcReserv == null && $timeEvt == null && $idvenReserv == null && $idvdReserv == null && $conReserv == null && $idfcReserv == null && $idstReserv == null) {
