@@ -4,6 +4,12 @@
     session_start();
       if (empty($_SESSION['username'])){
         header("Location:../login.php");
+      }else{
+          if ($_SESSION['hak'] != "Admin Reservasi") {
+            header("Location:../login.php");
+          }else {
+            echo "Log in as ".$_SESSION['username'];
+          }
       }
 ?>
 <html>
