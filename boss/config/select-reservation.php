@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selectreservation = mysqli_query($conn, "SELECT * FROM reservasi");
+  $selectreservation = mysqli_query($conn, "SELECT * FROM reservasi ORDER BY 1 DESC");
 
   if ($selectreservation) {
     // output data of each row
@@ -37,7 +37,7 @@
       echo '<td>'.$baris["username_admin"].'</td>';
       echo '<td>'.$baris["harga_total"].'</td>';
       echo '<td>'.$baris["waktu_pembuatan"].'</td>';
-      echo '<td>'.'<a href="./config/edit-reservation.php?update='.$baris["id_reservasi"].'">'.'<i class="fa fa-pencil" aria-hidden="true">'.'</i>'.'</a>'."&nbsp;&nbsp;".'<a href="./config/delete-customer.php?delete='.$baris["id_customer"].'">'.'<i class="fa fa-trash text-danger" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
+      echo '<td>'.'<a href="./config/edit-reservation.php?update='.$baris["id_reservasi"].'">'.'<i class="fa fa-pencil" aria-hidden="true">'.'</i>'.'</a>'."&nbsp;&nbsp;".'<a href="./config/delete-reservation.php?delete='.$baris["id_customer"].'">'.'<i class="fa fa-trash text-danger" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
       echo '</tr>';
       echo '</tbody>';
     }

@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selsecteamsal = mysqli_query($conn, "SELECT * FROM gaji_securityTeam");
+  $selsecteamsal = mysqli_query($conn, "SELECT * FROM gaji_securityTeam ORDER BY 1 DESC");
 
   if ($selsecteamsal) {
     // output data of each row

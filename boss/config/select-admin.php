@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selectuser = mysqli_query($conn, "SELECT * FROM user");
+  $selectuser = mysqli_query($conn, "SELECT * FROM user ORDER BY 1 DESC");
 
   if ($selectuser) {
     // output data of each row

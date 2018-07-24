@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selectvendor = mysqli_query($conn, "SELECT * FROM vendor");
+  $selectvendor = mysqli_query($conn, "SELECT * FROM vendor ORDER BY 1 DESC");
 
   if ($selectvendor) {
     // output data of each row

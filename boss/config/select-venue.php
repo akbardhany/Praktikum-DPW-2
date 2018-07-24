@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selectvenue = mysqli_query($conn, "SELECT * FROM tempat_acara");
+  $selectvenue = mysqli_query($conn, "SELECT * FROM tempat_acara ORDER BY 1 DESC");
 
   if ($selectvenue) {
     // output data of each row

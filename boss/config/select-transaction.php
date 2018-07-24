@@ -1,7 +1,7 @@
 <?php
   require '../connection.php';
 
-  $selecttransaction = mysqli_query($conn, "SELECT * FROM transaksi");
+  $selecttransaction = mysqli_query($conn, "SELECT * FROM transaksi ORDER BY 1 DESC");
 
   if ($selecttransaction) {
     // output data of each row
@@ -33,7 +33,7 @@
       echo '<td>'.$baris["sisa_bayar"].'</td>';
       echo '<td>'.$baris["status_transaksi"].'</td>';
       echo '<td>'.$baris["waktu_transaksi"].'</td>';
-      echo '<td>'.'<a href="./config/delete-transaction.php?delete='.$baris["id_customer"].'">'.'<i class="fa fa-trash text-danger" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
+      echo '<td>'.'<a href="./config/delete-transaction.php?delete='.$baris["id_transaksi"].'">'.'<i class="fa fa-trash text-danger" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
       echo '</tr>';
       echo '</tbody>';
     }
