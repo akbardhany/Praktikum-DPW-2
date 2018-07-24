@@ -20,6 +20,7 @@
     echo '<td>'."ID ADMIN".'</td>';
     echo '<td>'."TOTAL PRICE".'</td>';
     echo '<td>'."TIME".'</td>';
+    echo '<td>'."ACTION".'</td>';
     echo '</tr>';
     echo '<thead>';
     while($baris = mysqli_fetch_assoc($selectreservation)) {
@@ -36,6 +37,7 @@
       echo '<td>'.$baris["username_admin"].'</td>';
       echo '<td>'.$baris["harga_total"].'</td>';
       echo '<td>'.$baris["waktu_pembuatan"].'</td>';
+      echo '<td>'.'<a href="./config/read-reservation.php?read='.$baris["id_reservasi"].'" target="_blank">'.'<i class="fa fa-book" aria-hidden="true">'.'</i>'.'</a>'.'</td>';
       echo '</tr>';
       echo '</tbody>';
     }
