@@ -1,7 +1,7 @@
 <?php
   require_once '../../connection.php';
   $idReserv   = $_POST['id-reservation'];
-  $idadmReserv = "get from session";
+  $idadmReserv = $_POST['uname-admin'];
   $metPay     = $_POST['method-payment'];
   $toPrice  = "1000000";
   $paid = $_POST['paid'];
