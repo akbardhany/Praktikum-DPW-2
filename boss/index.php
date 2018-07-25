@@ -49,6 +49,9 @@
               <a class="nav-link" data-toggle="tab" href="#NewData">New Data</a>
             </li>
             <li class="nav-item col-sm-2">
+              <a class="nav-link" data-toggle="tab" href="#Special">Special</a>
+            </li>
+            <li class="nav-item col-sm-2">
               <a class="nav-link" href="../logout.php">Logout</a>
             </li>
           </ul>
@@ -345,6 +348,22 @@
                 </aside>
             </div>
           </div>
+        </div>
+        <div id="Special" class="container tab-pane fade">
+          <div class="row">
+            <div class="col-sm-7">
+              <h3>TABLE RESERVATION WITH INNER JOIN</h3>
+            </div>
+            <div class="col-sm-5">
+              <a href = "./config/reservation-toexcel.php" target = "blank" class = "btn btn-success"> <i class = "fa fa-print"></i> Export to Excel</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <?php include './config/inner-reservation.php'; ?>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container modal-footer">
         <i>&copy; scrup<sup>2</sup>&nbsp;2018 All Rights Reserved.</i>
