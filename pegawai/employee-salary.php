@@ -33,9 +33,11 @@
       <td><input type="file" name="imgemployee" accept="image/*" required /></td>
     </tr>
     <tr>
-      <td>ID Admin</td>
+      <td>Username Admin</td>
       <td>:</td>
-      <td>get from session</td>
+      <td>
+        <input type="text" name="uname-admin" value="<?php echo $_SESSION['username'] ?>" readonly>
+      </td>
     </tr>
     <tr>
       <td>&nbsp;</td>
