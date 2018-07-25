@@ -3,7 +3,7 @@
   $idEmp   = $_POST['idemployee'];
   $salEmp  = $_POST['salaryemployee'];
   $imgEmp  = $_FILES['imgemployee']['name'];
-  $unEmp   = "from session";
+  $unEmp   = $_POST['uname-admin'];
   $msg="";
 
   $targetfolder = "../profile-photo/".basename($imgEmp);

@@ -3,7 +3,7 @@
   $idSec   = $_POST['id-security'];
   $salSec  = $_POST['salary-security'];
   $imgSec  = $_FILES['img-security']['name'];
-  $unSec   = "from session";
+  $unSec   = $_POST['uname-admin'];
 
   $targetfolder = "../profile-photo/".basename($imgSec);
 
