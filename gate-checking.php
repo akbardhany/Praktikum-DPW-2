@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <title>Gate Checking</title>
+    <link rel='shortcut icon' type='image/x-icon' href='./img/ico-x.png' />
   </head>
   <body style="background:lavenderblush"><tt>
     <?php
