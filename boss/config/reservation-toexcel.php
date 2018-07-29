@@ -8,8 +8,7 @@
   $que = mysqli_query($conn, "SELECT reservasi.id_reservasi, customer.nama_customer, tempat_acara.nama_tempatAcara, vendor.nama_vendor, reservasi.waktu_acara, reservasi.konsep_acara, korlap.nama_korlap, security_team.nama_securityTeam, reservasi.username_admin, reservasi.harga_total, reservasi.waktu_pembuatan FROM (((((reservasi INNER JOIN customer ON reservasi.id_customer = customer.id_customer) INNER JOIN tempat_acara ON reservasi.id_tempatAcara = tempat_acara.id_tempatAcara) INNER JOIN vendor ON reservasi.id_vendor = vendor.id_vendor) INNER JOIN korlap ON reservasi.id_korlap = korlap.id_korlap) INNER JOIN security_team ON reservasi.id_securityTeam = security_team.id_securityTeam)");
 
   if ($que) {
-    echo '<div class="table-responsive">';
-    echo '<table class="table table-hover">';
+    echo '<table border=1>';
     echo '<thead>';
     echo '<tr>';
     echo '<td>'."ID RESERVATION".'</td>';
@@ -43,7 +42,6 @@
       echo '</tbody>';
     }
     echo '</table>';
-    echo '</div>';
   }else {
     echo "not selected yet";
   }
