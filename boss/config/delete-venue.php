@@ -10,5 +10,5 @@
   }else {
     echo "Logic Error";
   }
-
+mysqli_close($conn);
  ?>

@@ -24,7 +24,7 @@
       <td>Photo</td>
       <td>:</td>
       <td>
-        <input type="file" name="photo" accept="image/*" required />
+        <input type="file" name="photo-user" accept="image/*" required />
       </td>
     </tr>
     <tr>

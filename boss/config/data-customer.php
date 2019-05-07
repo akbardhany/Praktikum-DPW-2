@@ -16,7 +16,7 @@
   if ($dcus) {
     header("location: ../../boss/");
   }else {
-    echo "Error Data";
+    echo "something missed.";
     header("refresh: 2 ; ../../boss/");
   }
 

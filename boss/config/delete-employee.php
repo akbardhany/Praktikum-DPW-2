@@ -3,7 +3,7 @@
 
   $id  = $_GET['delete'];
 
-  $sql = mysqli_query($conn,"DELETE FROM customer WHERE id_customer=$id");
+  $sql = mysqli_query($conn,"DELETE FROM pegawai WHERE id_pegawai=$id");
 
   if ($sql) {
     echo "<script>alert('Data has been removed.');window.location='../../boss/'</script>";

@@ -38,7 +38,7 @@
                 <form class="" action="update-vendor.php" method="post" enctype="multipart/form-data">
                   <table>
                     <tr>
-                      <td>ID ADMIN</td>
+                      <td>ID</td>
                       <td>:</td>
                       <td><input type="number" name="vendor-id" value="<?php echo $baris['id_vendor']; ?>" readonly /></td>
                     </tr>

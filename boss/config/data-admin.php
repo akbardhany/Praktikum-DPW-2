@@ -4,7 +4,7 @@
   $name   = $_POST['name'];
   $addr   = $_POST['address'];
   $phone  = $_POST['phone'];
-  $photo  = $_FILES['photo']['name'];
+  $photo  = $_FILES['photo-user']['name'];
   $pwd    = $_POST['password'];
   $perm   = $_POST['permissions'];
 
@@ -21,8 +21,11 @@
   }else {
   $da = mysqli_query($conn, "INSERT INTO user (username_user, nama_user, alamat_user, nohp_user, foto_user, pass_user, hakakses_user, waktu_pembuatan) VALUES ('$uName','$name','$addr','$phone','$photo','$pwd','$perm',now())");
   }
-  if ($da && move_uploaded_file($_FILES['photo']['tmp_name'], $targetfolder)) {
+  if ($da && move_uploaded_file($_FILES['photo-user']['tmp_name'], $targetfolder)) {
     header("location: ../../boss/");
+  }else{
+    echo "image can't be saved.";
+    header("refresh:1.5 ; ../../boss");
   }
   mysqli_close($conn);
  ?>

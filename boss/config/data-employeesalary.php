@@ -16,8 +16,9 @@
 
   if ($demsa && move_uploaded_file($_FILES['imgemployee']['tmp_name'], $targetfolder)) {
     header("location: ../../boss/");
-  }else {
-    echo "blm record";
+  }else{
+    echo "image can't be saved.";
+    header("refresh:1.5 ; ../../boss");
   }
 
   mysqli_close($conn);

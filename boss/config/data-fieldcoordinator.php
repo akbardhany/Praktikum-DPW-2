@@ -14,6 +14,9 @@
   }
   if ($de) {
     header("location: ../../boss/");
+  }else{
+    echo "something missed.";
+    header("refresh:1.5 ; ../../boss");
   }
   mysqli_close($conn);
  ?>
